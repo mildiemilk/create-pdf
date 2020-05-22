@@ -8,7 +8,8 @@
   "scripts": {
     "test": "jest -w=2 --config=jest.config.json",
     "test:coverage": "jest --config=jest.config.json --coverage",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "dev": "nodemon ./src/example/index.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
