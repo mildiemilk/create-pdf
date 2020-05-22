@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const generatePDF = require('../../generatePDF')
+const generatePDF = require('../generatePDF')
 
 router.get('/', async (req, res, next) => {
   const docDefinition = {
