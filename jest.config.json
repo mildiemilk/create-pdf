@@ -1,0 +1,12 @@
+{
+  "collectCoverageFrom": [
+    "!**/node_modules/**"
+  ],
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "setupFiles": [
+    "./jest.setup.js"
+  ],
+  "testURL": "http://localhost/"
+}
