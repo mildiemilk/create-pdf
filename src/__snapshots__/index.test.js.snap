@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createDocDefinition When docDefinition template is columns Should map correctly 1`] = `
+Array [
+  Object {
+    "content": Array [
+      "Just string",
+      Object {
+        "columnGap": 10,
+        "columns": Array [
+          Object {
+            "text": "AppMan",
+            "width": "auto",
+          },
+          Object {
+            "text": "Second column",
+            "width": "*",
+          },
+          Object {
+            "text": Object {
+              "code": "1",
+              "key": "single",
+            },
+            "width": 100,
+          },
+          Object {
+            "text": "AF",
+            "width": "20%",
+          },
+        ],
+      },
+      "milk eiei",
+    ],
+  },
+]
+`;
+
+exports[`createDocDefinition When docDefinition template is encryption and access privileges Should map correctly 1`] = `
+Array [
+  Object {
+    "content": Array [
+      "milk",
+      "AppMan",
+    ],
+    "ownerPassword": "123456",
+    "permissions": Object {
+      "annotating": "AgentMate",
+      "contentAccessibility": true,
+      "copying": false,
+      "documentAssembly": true,
+      "fillingForms": true,
+      "modifying": false,
+      "printing": "highResolution",
+    },
+    "userPassword": "AppMan",
+  },
+]
+`;
+
+exports[`createDocDefinition When docDefinition template is headers and footers Should map correctly 1`] = `
+Array [
+  Object {
+    "content": Array [
+      "This is a standard paragraph, using default style",
+      Object {
+        "fontSize": 15,
+        "text": "AppMan",
+      },
+      Object {
+        "text": Array [
+          "milk",
+          Object {
+            "fontSize": 15,
+            "text": "AgentMate",
+          },
+          "than the rest.",
+        ],
+      },
+    ],
+    "footer": Object {
+      "columns": Array [
+        "AppMan",
+        Object {
+          "alignment": "right",
+          "text": "Right part",
+        },
+      ],
+    },
+    "header": "AgentMate",
+  },
+]
+`;
+
+exports[`createDocDefinition When docDefinition template is list Should map correctly 1`] = `
+Array [
+  Object {
+    "content": Array [
+      "AppMan",
+      Object {
+        "ul": Array [
+          "Item 1",
+          "Item 2",
+          "AgentMate",
+          Object {
+            "bold": true,
+            "text": "THAI_NATIONAL_ID_CARD",
+          },
+        ],
+      },
+      "Numbered list example:",
+      Object {
+        "ol": Array [
+          "Item 1",
+          "Item 2",
+          "AppMan",
+        ],
+      },
+    ],
+  },
+]
+`;
+
+exports[`createDocDefinition When docDefinition template is stack of paragraphs Should map correctly 1`] = `
+Array [
+  Object {
+    "content": Array [
+      "AppMan",
+      "paragraph 2",
+      Object {
+        "columns": Array [
+          "first column is a simple text",
+          "AppMan",
+          Array [
+            "paragraph A",
+            "AppMan",
+            "these paragraphs will be rendered one below another inside the column",
+            Array [
+              "AppMan",
+              "milk",
+            ],
+          ],
+        ],
+      },
+    ],
+  },
+]
+`;
+
+exports[`createDocDefinition When docDefinition template is styling Should map correctly 1`] = `
+Array [
+  Object {
+    "content": Array [
+      "This is a standard paragraph, using default style",
+      Object {
+        "fontSize": 15,
+        "text": "AppMan",
+      },
+      Object {
+        "text": Array [
+          "milk",
+          Object {
+            "fontSize": 15,
+            "text": "AgentMate",
+          },
+          "than the rest.",
+        ],
+      },
+    ],
+    "styles": Object {
+      "anotherStyle": Object {
+        "alignment": "right",
+        "italics": true,
+      },
+      "header": Object {
+        "bold": true,
+        "fontSize": 22,
+      },
+    },
+  },
+]
+`;
+
+exports[`createDocDefinition When docDefinition template is table Should map correctly 1`] = `
+Array [
+  Object {
+    "content": Array [
+      Object {
+        "layout": "1A",
+        "table": Object {
+          "body": Array [
+            Array [
+              "First",
+              "Second",
+              "AppMan",
+              "The last one",
+            ],
+            Array [
+              "Value 1",
+              false,
+              33,
+              "Value 4",
+            ],
+            Array [
+              Object {
+                "bold": true,
+                "text": "AgentMate",
+              },
+              "Val 2",
+              "Val 3",
+              "Test",
+            ],
+          ],
+          "headerRows": 1,
+          "widths": Array [
+            "*",
+            "auto",
+            100,
+            "*",
+          ],
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`createDocDefinition When docDefinition template is table of contents Should map correctly 1`] = `
+Array [
+  Object {
+    "content": Array [
+      Object {
+        "toc": Object {
+          "title": Object {
+            "style": "header",
+            "text": "AppMan",
+          },
+        },
+      },
+      Object {
+        "style": "header",
+        "text": "AgentMate",
+        "tocItem": true,
+      },
+    ],
+  },
+]
+`;
