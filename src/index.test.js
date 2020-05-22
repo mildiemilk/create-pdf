@@ -1,4 +1,4 @@
-import createDocDefinition from './index'
+const createDocDefinition = require('./index')
 
 const mockData = {
   insured: {

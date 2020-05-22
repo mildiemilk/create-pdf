@@ -1,4 +1,4 @@
-import * as R from 'ramda'
+const R = require('ramda')
 
 const mapTemplate = (value, data) => {
   switch (R.type(value)) {
@@ -13,4 +13,4 @@ const createDocDefinition = (template, data) => {
   return template.map((item) => mapTemplate(item, data))
 }
 
-export default createDocDefinition
+module.exports = createDocDefinition
