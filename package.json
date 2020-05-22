@@ -5,7 +5,31 @@
   "main": "index.js",
   "repository": "git@github.com:appman-agm/court.git",
   "license": "MIT",
+  "scripts": {
+    "test": "jest -w=2 --config=jest.config.json",
+    "test:coverage": "jest --config=jest.config.json --coverage",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "eslint": "^4.19.1",
+    "eslint-config-appman": "git+https://github.com/appman-agm/javascript.git",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "jest": "^24.8.0",
+    "ramda": "^0.26.1",
+    "webpack": "^4.6.0"
+  },
   "dependencies": {
+    "@babel/preset-env": "^7.9.6",
     "pdfmake": "^0.1.65"
   }
 }
