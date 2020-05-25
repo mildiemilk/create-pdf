@@ -10,8 +10,8 @@ const mapTemplate = async (item, data, transformImageFn) => {
     case 'String': return R.pathOr(item, item.split('.'), data)
     case 'Object': return R.reduce(async (acc, key) => ({
       ...await acc,
-      [key]: key === 'image' ?
-        await transformImageFn(item[key])
+      [key]: key === 'image'
+        ? await transformImageFn(item[key])
         : await mapTemplate(item[key], data, transformImageFn),
     }), {})(R.keys(item))
     case 'Array': return mapArrayTemplate(item, data, transformImageFn)
