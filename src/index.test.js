@@ -76,8 +76,8 @@ describe('createDocDefinition', () => {
         }
       }
     }]
-    it('Should map correctly', () => {
-      const result = createDocDefinition(template, mockData)
+    it('Should map correctly', async () => {
+      const result = await createDocDefinition(template, mockData)
       expect(result).toMatchSnapshot()
     })
   })
@@ -113,8 +113,8 @@ describe('createDocDefinition', () => {
         ]
       }
     ]
-    it('Should map correctly', () => {
-      const result = createDocDefinition(template, mockData)
+    it('Should map correctly', async () => {
+      const result = await createDocDefinition(template, mockData)
       expect(result).toMatchSnapshot()
     })
   })
@@ -138,8 +138,8 @@ describe('createDocDefinition', () => {
         ]
       }
     ]
-    it('Should map correctly', () => {
-      const result = createDocDefinition(template, mockData)
+    it('Should map correctly', async () => {
+      const result = await createDocDefinition(template, mockData)
       expect(result).toMatchSnapshot()
     })
   })
@@ -167,8 +167,8 @@ describe('createDocDefinition', () => {
         ]
       }
     ]
-    it('Should map correctly', () => {
-      const result = createDocDefinition(template, mockData)
+    it('Should map correctly', async () => {
+      const result = await createDocDefinition(template, mockData)
       expect(result).toMatchSnapshot()
     })
   })
@@ -195,8 +195,8 @@ describe('createDocDefinition', () => {
         ]
       }
     ]
-    it('Should map correctly', () => {
-      const result = createDocDefinition(template, mockData)
+    it('Should map correctly', async () => {
+      const result = await createDocDefinition(template, mockData)
       expect(result).toMatchSnapshot()
     })
   })
@@ -224,8 +224,8 @@ describe('createDocDefinition', () => {
         ]
       }
     ]
-    it('Should map correctly', () => {
-      const result = createDocDefinition(template, mockData)
+    it('Should map correctly', async () => {
+      const result = await createDocDefinition(template, mockData)
       expect(result).toMatchSnapshot()
     })
   })
@@ -246,8 +246,8 @@ describe('createDocDefinition', () => {
         ]
       }
     ]
-    it('Should map correctly', () => {
-      const result = createDocDefinition(template, mockData)
+    it('Should map correctly', async () => {
+      const result = await createDocDefinition(template, mockData)
       expect(result).toMatchSnapshot()
     })
   })
@@ -271,8 +271,26 @@ describe('createDocDefinition', () => {
         ]
       }
     ]
-    it('Should map correctly', () => {
-      const result = createDocDefinition(template, mockData)
+    it('Should map correctly', async () => {
+      const result = await createDocDefinition(template, mockData)
+      expect(result).toMatchSnapshot()
+    })
+  })
+  describe('When docDefinition template is image', () => {
+    const template = [
+      {
+        content: [
+          {
+            image: 'insured.documentType.value.code',
+            text: 'milk'
+          }
+        ]
+      }
+    ]
+    it('Should map correctly', async () => {
+      const getImageFn = jest.fn()
+      const result = await createDocDefinition(template, mockData, getImageFn)
+      expect(getImageFn).toHaveBeenCalled()
       expect(result).toMatchSnapshot()
     })
   })

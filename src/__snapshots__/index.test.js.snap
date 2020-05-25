@@ -91,6 +91,19 @@ Array [
 ]
 `;
 
+exports[`createDocDefinition When docDefinition template is image Should map correctly 1`] = `
+Array [
+  Object {
+    "content": Array [
+      Object {
+        "image": undefined,
+        "text": "milk",
+      },
+    ],
+  },
+]
+`;
+
 exports[`createDocDefinition When docDefinition template is list Should map correctly 1`] = `
 Array [
   Object {
