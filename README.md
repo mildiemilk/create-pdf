@@ -77,5 +77,4 @@ yarn dev
 ``` 
 then, open http://localhost:8080, it will generate pdf in `pdf/example.pdf`
 
-
 or you can pass your docDefinition to function `generatePDF` and when this function is called, it will generate new pdf.
