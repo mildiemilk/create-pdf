@@ -77,7 +77,7 @@ const output = createDocDefinition(template, state)
 
 ## How to use docDefinition with pdfMake 
 
-For examples, use pdfMake in server side
+For examples, use pdfMake in Server-side
 
 ```js
 yarn dev
