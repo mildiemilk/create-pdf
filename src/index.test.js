@@ -288,9 +288,9 @@ describe('createDocDefinition', () => {
       }
     ]
     it('Should map correctly', async () => {
-      const getImageFn = jest.fn()
-      const result = await createDocDefinition(template, mockData, getImageFn)
-      expect(getImageFn).toHaveBeenCalled()
+      const transformImageFn = jest.fn()
+      const result = await createDocDefinition(template, mockData, transformImageFn)
+      expect(transformImageFn).toHaveBeenCalled()
       expect(result).toMatchSnapshot()
     })
   })
