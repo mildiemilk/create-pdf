@@ -1,6 +1,6 @@
 const express = require('express')
 const generatePDF = require('../generatePDF')
-const createDocDefinition = required('../../index.js')
+const createDocDefinition = require('../../index')
 
 const router = express.Router()
 
@@ -14,11 +14,11 @@ router.get('/', async (req, res, next) => {
   }
   const template = {
     content: [
-      'insured.firstname.value',
+      { text: 'insured.firstname.value' },
       'Another paragraph, this time a little bit longer to make sure, this line will be divided into at least two lines'
     ]
   };
-  const docDefinition = createDocDefinition(template, state)
+  const docDefinition = await createDocDefinition(template, state)
   generatePDF(docDefinition)
   res.status(200).json({
     message: 'Generate pdf success'
