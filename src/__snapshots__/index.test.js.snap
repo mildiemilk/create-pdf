@@ -16,10 +16,7 @@ Object {
           "width": "*",
         },
         Object {
-          "text": Object {
-            "code": "1",
-            "key": "single",
-          },
+          "text": "1",
           "width": 100,
         },
         Object {
