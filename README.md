@@ -8,11 +8,12 @@ A library to create docDefinition for [pdfMake library](https://github.com/bpamp
 
 ### Concept
 
-- Input required 2 params
-  - Template is structure of docDefinition but may have a state key
-  - State in redux state or sync state
+- Input receive 3 values (template, state, transformImageFn)
+  - template : structure of docDefinition, it can have a state key
+  - State : redux state or sync state
+  - TransformImageFn : function to transform image (optional)
 - Output 
-  - The structures of template and output are the same but the value of the key from state is resolved
+  - Structure of template and output are the same but value of key from state is resolved
 
 ## Example
 
@@ -22,9 +23,7 @@ A library to create docDefinition for [pdfMake library](https://github.com/bpamp
 {
   content: [
     'This is a standard paragraph, using default style',
-   
     { text: 'insured.firstname.value', fontSize: 15 },
- 
     {
       text: [
         'This paragraph is defined as an array of elements to make it possible to ',
@@ -57,9 +56,7 @@ A library to create docDefinition for [pdfMake library](https://github.com/bpamp
 {
   content: [
     'This is a standard paragraph, using default style',
-   
     { text: 'appman', fontSize: 15 },
- 
     {
       text: [
         'This paragraph is defined as an array of elements to make it possible to ',
