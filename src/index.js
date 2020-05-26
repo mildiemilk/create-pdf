@@ -1,4 +1,4 @@
-import * as R from 'ramda'
+const R = require('ramda')
 
 const mapArrayTemplate = (item, data, transformImageFn) => R.reduce(async (acc, cur) => [
   ...await acc,
@@ -26,4 +26,4 @@ const createDocDefinition = async (template, data, transformImageFn = R.identity
   return mapObjectTemplate(template, data, transformImageFn)
 }
 
-export default createDocDefinition
+module.exports = createDocDefinition
