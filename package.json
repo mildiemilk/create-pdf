@@ -9,7 +9,8 @@
     "test": "jest -w=2 --config=jest.config.json",
     "test:coverage": "jest --config=jest.config.json --coverage",
     "lint": "eslint .",
-    "dev": "nodemon ./src/example/index.js"
+    "dev": "nodemon ./src/example/index.js",
+    "build": "rollup -c"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.9.6",
@@ -27,12 +28,15 @@
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jest": "^21.15.1",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "jest": "^24.8.0",
-    "ramda": "^0.26.1",
     "express": "^4.17.1",
-    "nodemon": "^2.0.4"
+    "jest": "^24.8.0",
+    "nodemon": "^2.0.4",
+    "ramda": "^0.26.1",
+    "rollup": "^2.10.9"
   },
   "dependencies": {
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
     "pdfmake": "^0.1.65"
   },
   "peerDependencies": {
