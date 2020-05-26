@@ -2,7 +2,7 @@
   "name": "court",
   "version": "0.1.0",
   "description": "Pdf generator",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:appman-agm/court.git",
   "license": "MIT",
   "scripts": {
