@@ -1,3 +1,5 @@
-const createDocDefinition = require('./src')
+import createDocDefinition from './src'
 
-module.exports = createDocDefinition
+export default {
+  createDocDefinition,
+} 
