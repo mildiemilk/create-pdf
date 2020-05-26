@@ -11,7 +11,7 @@ A library to create docDefinition for [pdfMake library](https://github.com/bpamp
 - Input receive 3 values (template, state, transformImageFn)
   - template : structure of docDefinition, it can have a state key
   - State : redux state or sync state
-  - TransformImageFn : function to transform image (optional)
+  - transformImageFn : function to transform image (optional)
 - Output 
   - Structure of template and output are the same but value of key from state is resolved
 
