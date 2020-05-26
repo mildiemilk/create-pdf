@@ -2,15 +2,19 @@
   "name": "court",
   "version": "0.1.0",
   "description": "Pdf generator",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:appman-agm/court.git",
   "license": "MIT",
   "scripts": {
     "test": "jest -w=2 --config=jest.config.json",
     "test:coverage": "jest --config=jest.config.json --coverage",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "dev": "nodemon ./src/example/index.js",
+    "build": "rollup -c"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
@@ -24,9 +28,13 @@
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jest": "^21.15.1",
     "eslint-plugin-jsx-a11y": "^6.0.3",
+    "express": "^4.17.1",
     "jest": "^24.8.0",
+    "nodemon": "^2.0.4",
     "ramda": "^0.26.1",
-    "@babel/preset-env": "^7.9.6"
+    "rollup": "^2.10.9",
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0"
   },
   "dependencies": {
     "pdfmake": "^0.1.65"
