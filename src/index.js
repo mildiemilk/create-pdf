@@ -8,7 +8,7 @@ const mapArrayTemplate = (item, data, transformImageFn) => R.reduce(async (acc, 
 const mapObjectTemplate = (item, data, transformImageFn) => R.reduce(async (acc, key) => ({
   ...await acc,
   [key]: key === 'image'
-    ? await transformImageFn(item[key])
+    ? await transformImageFn(item[key], data)
     : await mapTemplate(item[key], data, transformImageFn),
 }), {})(R.keys(item))
 
