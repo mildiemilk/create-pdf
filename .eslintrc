@@ -1,5 +1,4 @@
 {
-  "extends": "@appman/appman",
   "parser": "babel-eslint",
   "env": {
     "node": true,
